@@ -1,11 +1,13 @@
 # common-utils
 A collection of utilities which I've created/adapted over time, most of them are wrappers over standard
-libraries available customised for my convenience. Some of these are:
-1) StringUtils
-2) NumberUtils
-3) CollectionUtils
-4) DateUtils
-5) XMLParser
-6) ReflectionUtils
-7) JsonUtils
-8) ExponentialBackOff
+libraries available customised for my convenience. Some of these are:<br/>
+<ol>
+<li> StringUtils </li>
+<li> NumberUtils </li>
+<li> CollectionUtils </li>
+<li> DateUtils </li>
+<li> XMLParser </li>
+<li> ReflectionUtils </li>
+<li> JsonUtils </li>
+<li> ExponentialBackOff </li>
+</ol>
