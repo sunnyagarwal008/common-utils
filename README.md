@@ -10,4 +10,8 @@ libraries available customised for my convenience. Some of these are:<br/>
 <li> ReflectionUtils </li>
 <li> JsonUtils </li>
 <li> ExponentialBackOff </li>
+<li> FileUtils </li>
+<li> PdfUtils </li>
+<li> DelimitedFileParser </li>
+<li> ExcelSheetParser </li>
 </ol>

@@ -18,8 +18,6 @@ public class StringUtils {
     private static final String GMAIL_EMAIL_SUFFIX        = "@gmail.com";
     private static final int    GMAIL_EMAIL_SUFFIX_LENGTH = GMAIL_EMAIL_SUFFIX.length();
     public static final String  EMPTY_STRING              = "";
-    public static final char    CHAR_NEW_LINE             = '\n';
-    public static final char    CHAR_NULL                 = '\0';
 
     public static String getRandom(int length) {
         String randomString = getRandom();
@@ -200,11 +198,8 @@ public class StringUtils {
     /**
      * Parse a number from a string. Finds the first recognizable base-10 number (integer or floating point) in the
      * string and returns it as a Number. Uses American English conventions (i.e., '.' as decimal point and ',' as
-     * <<<<<<< HEAD thousands separator).
-     * 
-     * @param s String to parse ======= thousands separator). <<<<<<< Updated upstream
-     * @param string String to parse =======
-     * @param s String to parse >>>>>>> Stashed changes >>>>>>> cc5957b9e5f35a418b4f5af14be6805a0dc6a56a
+     *
+     * @param s String to parse
      * @return first recognizable number
      * @throws NumberFormatException if no recognizable number is found
      */
@@ -278,12 +273,12 @@ public class StringUtils {
     }
 
     /**
-     * Replace all occurences of a string.
+     * Replace all occurrences of a string.
      * 
      * @param subject String in which to search
      * @param original String to search for in subject
      * @param replacement String to substitute
-     * @return subject with all occurences of original replaced by replacement
+     * @return subject with all occurrences of original replaced by replacement
      */
     public static String replace(String subject, String original, String replacement) {
         StringBuilder output = new StringBuilder();
@@ -316,7 +311,7 @@ public class StringUtils {
     /**
      * Escapes characters in a string.
      * 
-     * @param subject String in which metacharacters are to be escaped
+     * @param subject String in which meta characters are to be escaped
      * @param chars Characters that need to be escaped (e.g. "\b\t\r\n\\")
      * @param escapeChar the escape character (e.g., '\\')
      * @param metachars escape code letters corresponding to each letter in chars (e.g. "btrn\\") <B>Must have
@@ -488,4 +483,22 @@ public class StringUtils {
         }
         return StringUtils.removeNonWordChars(input).toLowerCase();
     }
+
+    public static boolean hasText(CharSequence str) {
+        if (!hasLength(str)) {
+            return false;
+        }
+        int strLen = str.length();
+        for (int i = 0; i < strLen; i++) {
+            if (!Character.isWhitespace(str.charAt(i))) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean hasLength(CharSequence str) {
+        return (str != null && str.length() > 0);
+    }
+
 }
